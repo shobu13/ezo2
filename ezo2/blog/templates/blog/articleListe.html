@@ -6,150 +6,127 @@
 {% block contenu %}
 
 <!-- Page Header -->
-    <header class="masthead" style="background-image: url('{% static 'img/sora_no_woto_.jpg' %}')">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
-            <div class="site-heading">
-              <h1>{{ global.WEBSITE_NOM }}</h1>
-              <span class="subheading">{{ global.WEBSITE_DESC }}</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-<!-- Page Content -->
+<header class="masthead" style="background-image: url('{% static 'img/sora_no_woto_.jpg' %}')">
+    <div class="overlay"></div>
     <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h1>{{ global.WEBSITE_NOM }}</h1>
+                    <span class="subheading">{{ global.WEBSITE_DESC }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Post Content -->
+<!-- Page Content -->
+<div class="container">
 
-      <div class="row">
+    <div class="row">
 
         <!-- Blog Entries Column -->
         <div class="col-md-8">
 
-          <h1 class="my-4">Page Heading
-            <small>Secondary Text</small>
-          </h1>
+            <!-- Blog Post -->
+            {% if page != -1 %}
+                {% for article in articleListe %}
+                <div class="card mb-4">
+                    <img class="card-img-top" src="{{ article.header.url }}" alt="Card image cap">
+                    <div class="card-body">
+                        <h2 class="card-title">{{ article.titre }}</h2>
+                        <p class="card-text">{{ article.contenu|truncatewords_html:40|linebreaks }}</p>
+                        <a href="{% url 'lire' id=article.id slug=article.slug %}" class="btn btn-primary">Lire Plus &rarr;</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        {{ article.date }} par
+                        <a href="#">{{ article.auteur }}</a>
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title">aucun résultat trouvé</h2>
+                    </div>
+                </div>
+            {% endif %}
 
-          <!-- Blog Post -->
-          <div class="card mb-4">
-            <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
-            <div class="card-body">
-              <h2 class="card-title">Post Title</h2>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-              <a href="#" class="btn btn-primary">Read More &rarr;</a>
-            </div>
-            <div class="card-footer text-muted">
-              Posted on January 1, 2017 by
-              <a href="#">Start Bootstrap</a>
-            </div>
-          </div>
 
-          <!-- Blog Post -->
-          <div class="card mb-4">
-            <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
-            <div class="card-body">
-              <h2 class="card-title">Post Title</h2>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-              <a href="#" class="btn btn-primary">Read More &rarr;</a>
-            </div>
-            <div class="card-footer text-muted">
-              Posted on January 1, 2017 by
-              <a href="#">Start Bootstrap</a>
-            </div>
-          </div>
-
-          <!-- Blog Post -->
-          <div class="card mb-4">
-            <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
-            <div class="card-body">
-              <h2 class="card-title">Post Title</h2>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-              <a href="#" class="btn btn-primary">Read More &rarr;</a>
-            </div>
-            <div class="card-footer text-muted">
-              Posted on January 1, 2017 by
-              <a href="#">Start Bootstrap</a>
-            </div>
-          </div>
-
-          <!-- Pagination -->
-          <ul class="pagination justify-content-center mb-4">
-            <li class="page-item">
-              <a class="page-link" href="#">&larr; Older</a>
-            </li>
-            <li class="page-item disabled">
-              <a class="page-link" href="#">Newer &rarr;</a>
-            </li>
-          </ul>
+            <!-- Pagination -->
+            <ul class="pagination justify-content-center mb-4">
+                <li class="page-item {{ newDisable }}">
+                    <a class="page-link" href="{% url 'articleListe' %}/{{ page|add:-1 }}/{{ keywords }}/{{ selectedCat }}">&larr; Récents</a>
+                </li>
+                <li class="page-item {{ oldDisable }}">
+                    <a class="page-link" href="{% url 'articleListe' %}/{{ page|add:1 }}/{{ keywords }}/{{ selectedCat }}"> Anciens &rarr;</a>
+                </li>
+            </ul>
 
         </div>
 
         <!-- Sidebar Widgets Column -->
         <div class="col-md-4">
 
-          <!-- Search Widget -->
-          <div class="card my-4">
-            <h5 class="card-header">Search</h5>
-            <div class="card-body">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search for...">
-                <span class="input-group-btn">
-                  <button class="btn btn-secondary" type="button">Go!</button>
-                </span>
-              </div>
-            </div>
-          </div>
+            <!-- Search Widget -->
+            <div class="card my-4">
+                <h5 class="card-header">Recherche</h5>
+                <div class="card-body">
+                    <form action="{% url 'articleliste' page=0 keywords=keywords selectedCat=selectedCat %}" method="POST" class="form-group">
+                        {% csrf_token %}
+                        <div class="input-group">
 
-          <!-- Categories Widget -->
-          <div class="card my-4">
-            <h5 class="card-header">Categories</h5>
-            <div class="card-body">
-              <div class="row">
-                <div class="col-lg-6">
-                  <ul class="list-unstyled mb-0">
-                    <li>
-                      <a href="#">Web Design</a>
-                    </li>
-                    <li>
-                      <a href="#">HTML</a>
-                    </li>
-                    <li>
-                      <a href="#">Freebies</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-lg-6">
-                  <ul class="list-unstyled mb-0">
-                    <li>
-                      <a href="#">JavaScript</a>
-                    </li>
-                    <li>
-                      <a href="#">CSS</a>
-                    </li>
-                    <li>
-                      <a href="#">Tutorials</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+                            <input type="text" class="form-control" placeholder="Recherche pour..." name="search">
+                            <span class="input-group-btn">
+                                <input type="submit" class="btn btn-secondary" value="Go!">
+                            </span>
 
-          <!-- Side Widget -->
-          <div class="card my-4">
-            <h5 class="card-header">Side Widget</h5>
-            <div class="card-body">
-              You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
+                        </div>
+                    </form>
+                </div>
             </div>
-          </div>
+
+            <!-- Categories Widget -->
+            <div class="card my-4">
+                <h5 class="card-header">Categories</h5>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <a href="{% url 'articleliste' page=0 keywords='null' selectedCat='null' %}">voir tout</a>
+                                </li>
+                                <hr/>
+                            </ul>
+                        </div>
+                    </div>
+                    {% for categorieRow in categorieListe %}
+                    <div class="row">
+                        {% for categorieCol in categorieRow %}
+                        <div class="col-lg-6">
+                            <ul class="list-unstyled mb-0">
+                                {% for categorie in categorieCol %}
+                                <li>
+                                    <a href="{% url 'articleliste' page=0 keywords=keywords selectedCat=categorie.nom %}">{{ categorie.nom }}</a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
 
         </div>
 
-      </div>
-      <!-- /.row -->
-
     </div>
-    <hr>
-    <!-- /.container -->
-    {% endblock %}
+    <!-- /.row -->
+
+</div>
+<!-- /.container -->
+<hr>
+
+{% endblock %}
+
+

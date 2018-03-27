@@ -3,13 +3,14 @@ from django.utils import timezone
 
 class Article(models.Model):
     titre=models.CharField(max_length=100)
-    sousTitre=models.CharField(max_length=200, null=True)
+    sousTitre=models.CharField(max_length=200, null=False, blank=True, default="")
     slug = models.SlugField(max_length=100)
     auteur=models.CharField(max_length=42)
     contenu=models.TextField(null=True)
     #le paramètre default existe pour la plupart des champs
     #le paramètre verbose_name est lui aussi commun, il sert à donner une précision quand au nom du champs.
     date=models.DateTimeField(default=timezone.now, verbose_name="date de parution")
+    header=models.ImageField(upload_to=('upload/'), null=False, blank=True, default="750x300.png")
 
     #related_name permet de définir un nouveau nom pour la variable de la relation inverse.
     categorie=models.ForeignKey('Categorie', on_delete=models.PROTECT)

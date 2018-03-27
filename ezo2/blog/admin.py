@@ -6,8 +6,8 @@ from .models import Categorie, Article
 
 class ArticleAdmin(admin.ModelAdmin):
     #liste des champs à afficher
-    list_display=('titre', 'auteur','date','categorie', 'apercu_contenu', 'slug')
-    #remplie le champ apssé en paramètre en fonction du champ donné au format slug
+    list_display=('titre', 'auteur','date','categorie', 'apercu_contenu', 'slug', 'header')
+    #remplie le champ passé en paramètre en fonction du champ donné au format slug
     prepopulated_fields = {'slug': ('titre', ), }
     #liste des champs par lequels nous pouvons filtrer la liste
     list_filter=('auteur', 'categorie')
@@ -26,7 +26,7 @@ class ArticleAdmin(admin.ModelAdmin):
             #définis le comportement du sous champ
             'classes':['collapse',],
             #définis les champs qui y sont représenter
-            'fields':('titre', 'sousTitre', 'slug', 'auteur', 'categorie')
+            'fields':('titre', 'sousTitre', 'slug', 'auteur', 'categorie', 'header')
         }),
         #sous champ 2
         ('Contenu de l\'article', {
