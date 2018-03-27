@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>{% block title %}Mon blog sur les crêpes bretonnes{% endblock %}</title>
+    </head>
+    <body>
+        <header>Crêpes bretonnes</header>
+        <nav>
+            {% block nav %}
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <!--ce tag permet de générer l'url correspondant au nom de la vue on peut aussi passer une variable en paramètre.-->
+                <li><a href="{% url 'testNum' 42 %}">testNum</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+            {% endblock %}
+        </nav>
+        <section id="content">
+            {% block content %}{% endblock %}
+        </section>
+        <footer>&copy; Crêpes bretonnes</footer>
+    </body>
+</html>

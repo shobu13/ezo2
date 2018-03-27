@@ -1,0 +1,52 @@
+{% extends "blog/baseBlog.html" %} <!--Permet d'importer les blocs de base.html-->
+{% load static %}
+
+{% block titre %}{{ global.WEBSITE_NOM }}{% endblock %}
+
+{% block contenu %}
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('{% static 'img/sora_no_woto_.jpg' %}')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+              <h1>{{ global.WEBSITE_NOM }}</h1>
+              <span class="subheading">{{ global.WEBSITE_DESC }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            {% for article in articleList %}
+                <div class="post-preview">
+                  <a href="{% url 'lire' id=article.id slug=article.slug %}">
+                    <h2 class="post-title">
+                      {{ article.titre }}
+                    </h2>
+                    <h3 class="post-subtitle" style="font-size: 20px">
+                      {{ article.contenu|truncatewords_html:80|linebreaks }}
+                    </h3>
+                  </a>
+                  <p class="post-meta">poster par 
+                    <a href="#">{{ article.auteur }}</a>
+                    le {{ article.date }}</p>
+                </div>
+                <hr>
+            {% endfor %}
+          <!-- Pager -->
+          <div class="clearfix">
+            <a class="btn btn-primary float-right" href="#">plus ancien &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+
+{% endblock %}
