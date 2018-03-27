@@ -1,0 +1,1 @@
+Cette application vise à fournir un support pour les utilisateurs afin de pouvoir poster et lire des articles sur des thèmes divers.
