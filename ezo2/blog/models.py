@@ -6,7 +6,7 @@ class Article(models.Model):
     sousTitre=models.CharField(max_length=200, null=False, blank=True, default="")
     slug = models.SlugField(max_length=100)
     auteur=models.CharField(max_length=42)
-    contenu=models.TextField(null=True)
+    contenu=models.TextField()
     #le paramètre default existe pour la plupart des champs
     #le paramètre verbose_name est lui aussi commun, il sert à donner une précision quand au nom du champs.
     date=models.DateTimeField(default=timezone.now, verbose_name="date de parution")
