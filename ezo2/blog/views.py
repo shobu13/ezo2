@@ -1,7 +1,6 @@
 from django.shortcuts import render
-from django.http import HttpResponse, Http404
-from django.shortcuts import redirect, get_object_or_404
-from datetime import datetime
+from django.http import HttpResponse
+from django.shortcuts import get_object_or_404
 from blog.models import Article, Categorie
 from .forms import ContactForm, ArticleForm
 from shobu import slugGenerator
