@@ -5,21 +5,21 @@ from django.shortcuts import get_object_or_404
 from django.shortcuts import render
 
 import blog.global_var as global_var
-# from ezo2.shobu import slugGenerator
+# from ezo2.shobu import slug_generator
 # from ezo2.blog.forms import ContactForm, ArticleForm
-from blog import models
+from blog.models import Article, Categorie
 
 
 def home(request):
     """Vue permettant l'affichage de la page d'acceuil, renvoie les 4 articles les plus récents."""
-    article_list = models.Article.objects.order_by('date').reverse()[:4]
+    article_list = Article.objects.order_by('date').reverse()[:4]
     return render(request, 'blog/index.html',
                   {'articleList': article_list, 'global': global_var})
 
 
 def lire(request, id_article, slug):
     """vue permettant l'affichage d'un article en particulier."""
-    article = get_object_or_404(models.Article, id=id_article, slug=slug)
+    article = get_object_or_404(Article, id=id_article, slug=slug)
     print(article)
     return render(request, 'blog/post.html', {'article': article, 'global': global_var})
 
@@ -33,27 +33,27 @@ def article_liste(request, page=0, keywords="null", selected_cat="null"):
     raw = []
     old = ''
     new = ''
-    raw_categorie = models.Categorie.objects.all()
+    raw_categorie = Categorie.objects.all()
     if request.POST:
         print("POST=")
         print(request.POST['search'])
         keywords = request.POST['search']
 
     if keywords == 'null' and selected_cat == 'null':
-        raw_article_list = models.Article.objects.order_by('date').reverse()
+        raw_article_list = Article.objects.order_by('date').reverse()
     else:
         if keywords != 'null' and selected_cat == 'null':
             filtres = Q(titre__contains=keywords) | Q(contenu__contains=keywords)
-            raw_article_list = models.Article.objects.filter(filtres).order_by('date').reverse()
+            raw_article_list = Article.objects.filter(filtres).order_by('date').reverse()
 
         elif keywords == 'null' and selected_cat != 'null':
-            raw_article_list = models.Article.objects.filter(categorie__nom__contains=selected_cat)
+            raw_article_list = Article.objects.filter(categorie__nom__contains=selected_cat)
             raw_article_list = raw_article_list.order_by('date').reverse()
 
         else:
             filtres = (Q(titre__contains=keywords) | Q(contenu__contains=keywords)) &\
                      Q(categorie__nom__contains=selected_cat)
-            raw_article_list = models.Article.objects.filter(filtres).order_by('date').reverse()
+            raw_article_list = Article.objects.filter(filtres).order_by('date').reverse()
 
     print("raw article liste =")
     print(raw_article_list)
@@ -128,7 +128,7 @@ def a_propos(request):
 #         # le commit=False permet d'enregister les donnée du formulaire dans un objet
 #         # avec lequel on peut travailer avant de l'envoyer.
 #         article = form.save(commit=False)
-#         article.slug = slugGenerator(form.cleaned_data['titre'])
+#         article.slug = slug_generator(form.cleaned_data['titre'])
 #         article.save()
 #         return HttpResponse('envoyer')
 #     return render(request, 'blog/articleForm.html', locals())
