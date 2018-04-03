@@ -1,14 +1,9 @@
 from django.db.models import Q
 from django.http import HttpResponse
-<<<<<<< HEAD
 from django.shortcuts import get_object_or_404
 from django.shortcuts import render
 
 from ezo2.shobu import slugGenerator
-=======
-from django.shortcuts import redirect, get_object_or_404
-from blog.models import Article, Categorie
->>>>>>> d0adc3b1bd18eb7c53b0e2404006c74fb8f7c210
 from .forms import ContactForm, ArticleForm
 from .models import Article, Categorie
 from ezo2.globalVar import *
@@ -89,9 +84,6 @@ def a_propos(request):
     return render(request, 'blog/about.html', {'global': globals()})
 
 
-	
-##TODO--------------------------------------------------------------------------------------------
-	
 def contact(request):
     # on construit le formulaire, soit avec les données postée
     # sois vide si l'utilisateur y accède pour la première fois

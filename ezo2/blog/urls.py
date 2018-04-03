@@ -20,16 +20,14 @@ from blog import views       #on importe le module contenant nos vues
 urlpatterns = [
     #page d'acceuil (index)
     path('blog', views.home, name='blog'),
-    path('blog/article/<int:id>-<slug:slug>', views.lire, name='lire'),
-    path('blog/articleliste', views.articleListe, name='articleListe'),
-    path('blog/articleliste/<int:page>/<str:keywords>/<str:selectedCat>', views.articleListe, name='articleliste'),
-    path('blog/a_propos', views.a_propos, name='a_propos'),
-	
-	##TODO
-	#formulaire de contact
+    #formulaire de contact
     path('contact', views.contact, name='contact'),
     #page 404
     path('404', views.e404, name='404'),
     #formulaire d'ajout d'article
     path('blog/addArticle', views.article, name='article'),
+    path('blog/article/<int:id>-<slug:slug>', views.lire, name='lire'),
+    path('blog/articleliste', views.articleListe, name='articleListe'),
+    path('blog/articleliste/<int:page>/<str:keywords>/<str:selectedCat>', views.articleListe, name='articleliste'),
+    path('blog/a_propos', views.a_propos, name='a_propos'),
 ]
