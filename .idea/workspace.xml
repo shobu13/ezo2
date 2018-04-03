@@ -16,6 +16,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/ezo2Project$manage.coverage" NAME="manage Coverage Results" MODIFIED="1522779218879" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ezo2" />
+  </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
@@ -105,6 +108,32 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ezo2Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ezo2" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ezo2/manage.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.manage" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -222,21 +251,21 @@
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
           <ID>JavaScript-modules-diagram</ID>
-          <OriginalElement>$PROJECT_DIR$/ezo2</OriginalElement>
+          <OriginalElement />
           <nodes>
-            <node x="" y="">$PROJECT_DIR$/ezo2/templates/404.html</node>
-            <node x="" y="">$PROJECT_DIR$/ezo2/blog/templates/blog/articleListe.html</node>
-            <node x="" y="">$PROJECT_DIR$/ezo2/blog/templates/blog/baseBlog.html</node>
-            <node x="" y="">$PROJECT_DIR$/ezo2/static/js/bootstrap.bundle.js#jquery.js#356;</node>
-            <node x="" y="">$PROJECT_DIR$/ezo2/static/vendor/bootstrap/js/bootstrap.bundle.js#jquery#349;</node>
-            <node x="" y="">$PROJECT_DIR$/ezo2/static/vendor/bootstrap/js/bootstrap.bundle.min.js#jquery#316;</node>
-            <node x="" y="">$PROJECT_DIR$/ezo2/static/js/bootstrap.bundle.min.js#jquery.js#323;</node>
-            <node x="" y="">$PROJECT_DIR$/ezo2/static/js/bootstrap.js#jquery.js#356;D:/Documents/partage_VM/ezo 2/ezo2Project/ezo2/static/js/bootstrap.js#popper.js#375;</node>
-            <node x="" y="">$PROJECT_DIR$/ezo2/static/vendor/bootstrap/js/bootstrap.js#jquery#349;D:/Documents/partage_VM/ezo 2/ezo2Project/ezo2/static/vendor/bootstrap/js/bootstrap.js#popper.js#368;</node>
-            <node x="" y="">$PROJECT_DIR$/ezo2/static/js/bootstrap.min.js#jquery.js#323;D:/Documents/partage_VM/ezo 2/ezo2Project/ezo2/static/js/bootstrap.min.js#popper.js#341;</node>
-            <node x="" y="">$PROJECT_DIR$/ezo2/static/vendor/bootstrap/js/bootstrap.min.js#jquery#316;D:/Documents/partage_VM/ezo 2/ezo2Project/ezo2/static/vendor/bootstrap/js/bootstrap.min.js#popper.js#334;</node>
-            <node x="" y="">$PROJECT_DIR$/ezo2/blog/templates/blog/contact.html</node>
-            <node x="" y="">$PROJECT_DIR$/ezo2/static/js/jquery.js</node>
+            <node x="" y="" />
+            <node x="" y="" />
+            <node x="" y="" />
+            <node x="" y="" />
+            <node x="" y="" />
+            <node x="" y="" />
+            <node x="" y="" />
+            <node x="" y="" />
+            <node x="" y="" />
+            <node x="" y="" />
+            <node x="" y="" />
+            <node x="" y="" />
+            <node x="" y="" />
             <node x="" y="">css/clean-blog.min.css</node>
             <node x="" y="">https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic</node>
             <node x="" y="">https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800</node>
@@ -249,14 +278,14 @@
             <node x="" y="">vendor/bootstrap/js/bootstrap.bundle.min.js</node>
             <node x="" y="">vendor/font-awesome/css/font-awesome.min.css</node>
             <node x="" y="">vendor/jquery/jquery.min.js</node>
-            <node x="" y="">{% static 'bu.jpg' %}</node>
-            <node x="" y="">{% static 'css/clean-blog.min.css' %}</node>
-            <node x="" y="">{% static 'js/clean-blog.min.js' %}</node>
-            <node x="" y="">{% static 'vendor/bootstrap/css/bootstrap.min.css' %}</node>
-            <node x="" y="">{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}</node>
-            <node x="" y="">{% static 'vendor/font-awesome/css/font-awesome.min.css' %}</node>
-            <node x="" y="">{% static 'vendor/jquery/jquery.min.js' %}</node>
-            <node x="" y="">{{ article.header.url }}</node>
+            <node x="" y="" />
+            <node x="" y="" />
+            <node x="" y="" />
+            <node x="" y="" />
+            <node x="" y="" />
+            <node x="" y="" />
+            <node x="" y="" />
+            <node x="" y="" />
           </nodes>
           <notes />
           <edges />
