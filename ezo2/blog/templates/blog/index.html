@@ -26,7 +26,7 @@
         <div class="col-lg-8 col-md-10 mx-auto">
             {% for article in articleList %}
                 <div class="post-preview">
-                  <a href="{% url 'lire' id=article.id slug=article.slug %}">
+                  <a href="{% url 'lire' id_article=article.id slug=article.slug %}">
                     <h2 class="post-title">
                       {{ article.titre }}
                     </h2>

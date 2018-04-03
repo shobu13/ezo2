@@ -4,24 +4,24 @@ from django.db.models import Q
 from django.shortcuts import get_object_or_404
 from django.shortcuts import render
 
-from ezo2 import globalVar
+import blog.global_var as global_var
 # from ezo2.shobu import slugGenerator
 # from ezo2.blog.forms import ContactForm, ArticleForm
-from ezo2.blog import models
+from blog import models
 
 
 def home(request):
     """Vue permettant l'affichage de la page d'acceuil, renvoie les 4 articles les plus récents."""
     article_list = models.Article.objects.order_by('date').reverse()[:4]
     return render(request, 'blog/index.html',
-                  {'articleList': article_list, 'global': globalVar})
+                  {'articleList': article_list, 'global': global_var})
 
 
 def lire(request, id_article, slug):
     """vue permettant l'affichage d'un article en particulier."""
     article = get_object_or_404(models.Article, id=id_article, slug=slug)
     print(article)
-    return render(request, 'blog/post.html', {'article': article, 'global': globalVar})
+    return render(request, 'blog/post.html', {'article': article, 'global': global_var})
 
 
 def article_liste(request, page=0, keywords="null", selected_cat="null"):
@@ -72,28 +72,28 @@ def article_liste(request, page=0, keywords="null", selected_cat="null"):
         if page == len(baked_article_liste) - 1:
             old = 'disabled'
 
-        print("articleListe=")
+        print("baked_article_liste=")
         print(baked_article_liste)
 
         print("sending page")
         return render(request, 'blog/articleListe.html',
-                      {'categorieListe': categorie_liste, 'global': globalVar,
-                       'articleListe': baked_article_liste[page],
+                      {'categorieListe': categorie_liste, 'global': global_var,
+                       'article_liste': baked_article_liste[page],
                        'page': page, 'oldDisable': old, 'newDisable': new, 'keywords': keywords,
-                       'selectedCat': selected_cat, })
+                       'selected_cat': selected_cat, })
 
     else:
         print("no result")
         return render(request, 'blog/articleListe.html',
-                      {'categorieListe': categorie_liste, 'global': globalVar,
-                       'articleListe': '', 'page': -1,
+                      {'categorieListe': categorie_liste, 'global': global_var,
+                       'article_liste': '', 'page': -1,
                        'oldDisable': 'disabled', 'newDisable': 'disabled', 'keywords': keywords,
-                       'selectedCat': selected_cat, })
+                       'selected_cat': selected_cat, })
 
 
 def a_propos(request):
     """vue affichant diverse informations sur la communauté et ses membres."""
-    return render(request, 'blog/about.html', {'global': globalVar})
+    return render(request, 'blog/about.html', {'global': global_var})
 
 # TODO ---------------------------------------------------------------
 
