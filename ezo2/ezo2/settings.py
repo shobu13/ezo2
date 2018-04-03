@@ -25,7 +25,7 @@ SECRET_KEY = 'bsmb%s5y(w=e1ffcs1x%2asg2-u_u$)h4+dgqu-@=5r(v1%q!e'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.0.190',]
+ALLOWED_HOSTS = ['*',]
 
 MEDIA_ROOT=BASE_DIR+'/static/img/'
 MEDIA_URL='/media/'
@@ -81,12 +81,8 @@ WSGI_APPLICATION = 'ezo2.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',   # Backends disponibles : 'postgresql', 'mysql', 'sqlite3' et 'oracle'.
-        'NAME': 'ezo2',             # Nom de la base de données
-        'USER': 'root',
-        'PASSWORD': 'Jioshield13',
-        'HOST': '',                    # Utile si votre base de données est sur une autre machine
-        'PORT': '',                         # ... et si elle utilise un autre port que celui par défaut
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
