@@ -1,12 +1,3 @@
-from django.shortcuts import render
-from django.http import HttpResponse
-from django.shortcuts import get_object_or_404
-from blog.models import Article, Categorie
-from .forms import ContactForm, ArticleForm
-from shobu import slugGenerator
-from globalVar import *
-from django.db.models import Q
-
 # Create your views here.
 
 def home(request):
