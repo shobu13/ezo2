@@ -1,7 +1,6 @@
 from django.shortcuts import render
-from django.http import HttpResponse, Http404
+from django.http import HttpResponse
 from django.shortcuts import redirect, get_object_or_404
-from datetime import datetime
 from blog.models import Article, Categorie
 from .forms import ContactForm, ArticleForm
 from shobu import slugGenerator
@@ -73,6 +72,9 @@ def articleListe(request, page=0, keywords="null", selectedCat="null"):
 def a_propos(request):
     return render(request, 'blog/about.html', {'global':globals()})
 
+	
+##TODO--------------------------------------------------------------------------------------------
+	
 def contact(request):
     #on construit le formulaire, soit avec les données postée, sois vide si l'utilisateur y accède pour la première fois
     form = ContactForm(request.POST or None)
