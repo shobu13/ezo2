@@ -86,7 +86,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ezo2/manage.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -205,10 +205,10 @@
             <node x="" y="">$PROJECT_DIR$/ezo2/static/vendor/bootstrap/js/bootstrap.bundle.js#jquery#349;</node>
             <node x="" y="">$PROJECT_DIR$/ezo2/static/vendor/bootstrap/js/bootstrap.bundle.min.js#jquery#316;</node>
             <node x="" y="">$PROJECT_DIR$/ezo2/static/js/bootstrap.bundle.min.js#jquery.js#323;</node>
-            <node x="" y="">$PROJECT_DIR$/ezo2/static/js/bootstrap.js#jquery.js#356;D:/Documents/partage_VM/ezo 2/ezo2Project/ezo2/static/js/bootstrap.js#popper.js#375;</node>
-            <node x="" y="">$PROJECT_DIR$/ezo2/static/vendor/bootstrap/js/bootstrap.js#jquery#349;D:/Documents/partage_VM/ezo 2/ezo2Project/ezo2/static/vendor/bootstrap/js/bootstrap.js#popper.js#368;</node>
-            <node x="" y="">$PROJECT_DIR$/ezo2/static/js/bootstrap.min.js#jquery.js#323;D:/Documents/partage_VM/ezo 2/ezo2Project/ezo2/static/js/bootstrap.min.js#popper.js#341;</node>
-            <node x="" y="">$PROJECT_DIR$/ezo2/static/vendor/bootstrap/js/bootstrap.min.js#jquery#316;D:/Documents/partage_VM/ezo 2/ezo2Project/ezo2/static/vendor/bootstrap/js/bootstrap.min.js#popper.js#334;</node>
+            <node x="" y="" />
+            <node x="" y="" />
+            <node x="" y="" />
+            <node x="" y="" />
             <node x="" y="">$PROJECT_DIR$/ezo2/blog/templates/blog/contact.html</node>
             <node x="" y="">$PROJECT_DIR$/ezo2/static/js/jquery.js</node>
             <node x="" y="">css/clean-blog.min.css</node>
@@ -223,14 +223,14 @@
             <node x="" y="">vendor/bootstrap/js/bootstrap.bundle.min.js</node>
             <node x="" y="">vendor/font-awesome/css/font-awesome.min.css</node>
             <node x="" y="">vendor/jquery/jquery.min.js</node>
-            <node x="" y="">{% static 'bu.jpg' %}</node>
-            <node x="" y="">{% static 'css/clean-blog.min.css' %}</node>
-            <node x="" y="">{% static 'js/clean-blog.min.js' %}</node>
-            <node x="" y="">{% static 'vendor/bootstrap/css/bootstrap.min.css' %}</node>
-            <node x="" y="">{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}</node>
-            <node x="" y="">{% static 'vendor/font-awesome/css/font-awesome.min.css' %}</node>
-            <node x="" y="">{% static 'vendor/jquery/jquery.min.js' %}</node>
-            <node x="" y="">{{ article.header.url }}</node>
+            <node x="" y="" />
+            <node x="" y="" />
+            <node x="" y="" />
+            <node x="" y="" />
+            <node x="" y="" />
+            <node x="" y="" />
+            <node x="" y="" />
+            <node x="" y="" />
           </nodes>
           <notes />
           <edges />
