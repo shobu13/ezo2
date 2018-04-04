@@ -13,21 +13,22 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
 from django.urls import path
-from blog import views       #on importe le module contenant nos vues
+from blog import views       # on importe le module contenant nos vues
+
 
 urlpatterns = [
-    #page d'acceuil (index)
+    # page d'acceuil (index)
     path('blog', views.home, name='blog'),
-    #formulaire de contact
-    path('contact', views.contact, name='contact'),
-    #page 404
-    path('404', views.e404, name='404'),
-    #formulaire d'ajout d'article
-    path('blog/addArticle', views.article, name='article'),
-    path('blog/article/<int:id>-<slug:slug>', views.lire, name='lire'),
-    path('blog/articleliste', views.articleListe, name='articleListe'),
-    path('blog/articleliste/<int:page>/<str:keywords>/<str:selectedCat>', views.articleListe, name='articleliste'),
+    # #formulaire de contact
+    # path('contact', views.contact, name='contact'),
+    # #page 404
+    # path('404', views.e404, name='404'),
+    # #formulaire d'ajout d'article
+    # path('blog/addArticle', views.article, name='article'),
+    path('blog/article/<int:id_article>-<slug:slug>', views.lire, name='lire'),
+    path('blog/article_liste', views.article_liste, name='article_liste'),
+    path('blog/article_liste/<int:page>/<str:keywords>/<str:selected_cat>', views.article_liste,
+         name='article_liste'),
     path('blog/a_propos', views.a_propos, name='a_propos'),
 ]
