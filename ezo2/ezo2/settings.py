@@ -26,7 +26,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-MEDIA_ROOT = BASE_DIR + '/static/img/'
+MEDIA_ROOT = BASE_DIR + '/static/'
 MEDIA_URL = '/media/'
 
 # Application definition
