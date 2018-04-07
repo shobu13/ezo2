@@ -14,7 +14,7 @@ class Article(models.Model):
     # le paramètre verbose_name est lui aussi commun,
     # il sert à donner une précision quand au nom du champs.
     date = models.DateTimeField(default=timezone.now, verbose_name="date de parution")
-    header = models.ImageField(upload_to='upload/', null=False, blank=True, default="750x300.png")
+    header = models.ImageField(upload_to='blog/img/upload/', null=False, blank=True, default="blog/img/750x300.png")
 
     # related_name permet de définir un nouveau nom pour la variable de la relation inverse.
     categorie = models.ForeignKey('Categorie', on_delete=models.PROTECT)
