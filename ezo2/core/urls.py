@@ -21,5 +21,6 @@ urlpatterns = [
     path('a_propos', views.a_propos, name='aPropos'),
     path('connexion', views.connexion, name='connexion'),
     path('inscription', views.inscription, name='inscription'),
+    path('deconnexion', views.deconnexion, name='deconnexion'),
 ]
 

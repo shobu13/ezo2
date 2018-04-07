@@ -4,63 +4,82 @@
 {% block titre %}{{ global.WEBSITE_NOM }} - A propos{% endblock %}
 
 {% block contenu %}
-<link href="{% static 'core/css/connexion.css' %}" rel="stylesheet">
+    <link href="{% static 'core/css/connexion.css' %}" rel="stylesheet">
 
     <!-- Page Content -->
     <section class="py-5">
         <div class="container">
-    	<div class="row">
-			<div class="col-md-6 offset-md-3">
-				<div class="card panel-login">
-					<div class="card-header">
-						<div class="row">
-							<div class="col-6">
-								<a href="{% url 'connexion' %}" class="active text-primary" id="login-form-link">Login</a>
-							</div>
-							<div class="col-6">
-								<a href="{% url 'inscription' %}" id="register-form-link">Register</a>
-							</div>
-						</div>
-						<hr>
-					</div>
-					<div class="card-body">
-						<div class="row">
-							<div class="col-lg-12">
-								<form id="login-form" action="https://phpoll.com/login/process" method="post" role="form" style="display: block;">
-									<div class="form-group">
-										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
-									</div>
-									<div class="form-group">
-										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
-									</div>
-									<!--<div class="form-group text-center">
-										<input type="checkbox" tabindex="3" class="" name="remember" id="remember">
-										<label for="remember"> Remember Me</label>
-									</div>-->
-									<div class="form-group">
-										<div class="row">
-											<div class="col-sm-6 offset-sm-3">
-												<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-lg-12">
-												<div class="text-center">
-													<a href="https://phpoll.com/recover" tabindex="5" class="forgot-password">Forgot Password?</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="card panel-login">
+                        {% if user.is_authenticated %}
+                            Vous êtes connecter <br/>
+                            <a href="{% url 'deconnexion' %}">
+                                <button class="btn btn-primary">Se déconnecter</button>
+                            </a>
+                        {% else %}
+                            <div class="card-header">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <a href="{% url 'connexion' %}" class="active text-primary"
+                                           id="login-form-link">Login</a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="{% url 'inscription' %}" id="register-form-link">Register</a>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        {% if msg %}
+                                            {{ msg }}<br/>
+                                        {% endif %}
+                                        {{ form.errors }}
+                                        <form id="login-form" action="#" method="post" role="form"
+                                              style="display: block;">
+                                            {% csrf_token %}
+                                            <div class="form-group">
+                                                {{ form.username.errors }}
+                                                {{ form.username }}
+                                            </div>
+                                            <div class="form-group">
+                                                {{ form.password.errors }}
+                                                {{ form.password }}
+                                            </div>
+                                            <!--<div class="form-group text-center">
+                                                <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
+                                                <label for="remember"> Remember Me</label>
+                                            </div>-->
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-sm-6 offset-sm-3">
+                                                        <input type="submit"
+                                                               class="form-control btn btn-login"
+                                                               value="Log In">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <div class="text-center">
+                                                            <a href="#" class="forgot-password">Forgot
+                                                                Password?</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
 
