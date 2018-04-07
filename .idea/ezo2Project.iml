@@ -24,6 +24,7 @@
     <option name="TEMPLATE_FOLDERS">
       <list>
         <option value="$MODULE_DIR$/ezo2/blog/templates" />
+        <option value="$MODULE_DIR$/ezo2/core/templates" />
       </list>
     </option>
   </component>

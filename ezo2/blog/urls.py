@@ -19,7 +19,7 @@ from blog import views       # on importe le module contenant nos vues
 
 urlpatterns = [
     # page d'acceuil (index)
-    path('blog', views.home, name='blog'),
+    path('blog', views.home, name='blogHome'),
     # #formulaire de contact
     # path('contact', views.contact, name='contact'),
     # #page 404
