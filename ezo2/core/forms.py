@@ -10,16 +10,28 @@ class CreateUserForm(forms.ModelForm):
         model = User
         fields = ['username', 'email', 'password']
         widgets = {
-            'username': forms.Textarea(attrs={
+            'username': forms.TextInput(attrs={
                 'class': 'form-control',
                 'placeholder': 'Nom d\'utilisateur',
             }),
-            'email': forms.EmailField(attrs={
+            'email': forms.EmailInput(attrs={
                 'class': 'form-control',
-                'placeholder': 'Adresse Mail',
+                'placeholder': 'Adresse mail',
             }),
             'password': forms.PasswordInput(attrs={
                 'class': 'form-control',
                 'placeholder': 'Mot de passe',
             }),
         }
+
+
+class ConnexionForm(forms.Form):
+    """Formulaire de connexion"""
+    username = forms.CharField(widget=forms.TextInput(attrs={
+        'class': 'form-control',
+        'placeholder': 'Pseudo',
+    }))
+    password = forms.CharField(widget=forms.PasswordInput(attrs={
+        'class': 'form-control',
+        'placeholder': 'Mot de passe',
+    }))
