@@ -18,5 +18,6 @@ from core import views
 
 urlpatterns = [
     path('', views.home, name='coreHome'),
+    path('a_propos', views.a_propos, name='aPropos')
 ]
 

@@ -30,5 +30,4 @@ urlpatterns = [
     path('blog/article_liste', views.article_liste, name='article_liste'),
     path('blog/article_liste/<int:page>/<str:keywords>/<str:selected_cat>', views.article_liste,
          name='article_liste'),
-    path('blog/a_propos', views.a_propos, name='a_propos'),
 ]

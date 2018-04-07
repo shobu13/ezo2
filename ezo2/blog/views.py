@@ -4,7 +4,7 @@ from django.db.models import Q
 from django.shortcuts import get_object_or_404
 from django.shortcuts import render
 
-import blog.global_var as global_var
+import global_var
 # from ezo2.shobu import slug_generator
 # from ezo2.blog.forms import ContactForm, ArticleForm
 from blog.models import Article, Categorie
@@ -90,10 +90,6 @@ def article_liste(request, page=0, keywords="null", selected_cat="null"):
                        'oldDisable': 'disabled', 'newDisable': 'disabled', 'keywords': keywords,
                        'selected_cat': selected_cat, })
 
-
-def a_propos(request):
-    """vue affichant diverse informations sur la communauté et ses membres."""
-    return render(request, 'blog/about.html', {'global': global_var})
 
 # TODO ---------------------------------------------------------------
 
