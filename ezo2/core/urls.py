@@ -18,6 +18,8 @@ from core import views
 
 urlpatterns = [
     path('', views.home, name='coreHome'),
-    path('a_propos', views.a_propos, name='aPropos')
+    path('a_propos', views.a_propos, name='aPropos'),
+    path('connexion', views.connexion, name='connexion'),
+    path('inscription', views.inscription, name='inscription'),
 ]
 
