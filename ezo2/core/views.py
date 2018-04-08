@@ -28,6 +28,7 @@ def connexion(request):
             user = authenticate(username=username, password=password)
             if user:
                 login(request, user)
+                return render(request, 'core/home.html', {'global': global_var, 'connexion': True})
             else:
                 msg = "Mot de passe ou nom d'utilisateur inconnu"
     else:
@@ -39,7 +40,7 @@ def connexion(request):
 
 def deconnexion(request):
     logout(request)
-    return redirect(reverse('coreHome'))
+    return render(request, 'core/home.html', {'global': global_var, 'deconnexion': True})
 
 
 def inscription(request):

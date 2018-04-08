@@ -17,10 +17,32 @@
 
     <!-- Custom styles for this template -->
     <link href="{% static 'core/css/half-slider.css' %}" rel="stylesheet">
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'core/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'core/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    {% if connexion %}
+        <script type="text/javascript">
+            $(document).ready(function () {
+
+                $("#connexion").modal('show');
+
+            });
+        </script>
+    {% endif %}
+    {% if deconnexion %}
+        <script type="text/javascript">
+            $(document).ready(function () {
+
+                $("#deconnexion").modal('show');
+
+            });
+        </script>
+    {% endif %}
 
 </head>
 
 <body>
+
 
 <!-- Navigation -->
 {% if user.is_authenticated %}
@@ -35,11 +57,11 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#}">{{ user.username }}
+                        <a class="nav-link" href="#">{{ user.username }}
                         </a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">--
+                        <a class="nav-link" href="#">|
                         </a>
                     </li>
                     <li class="nav-item active">
@@ -47,7 +69,7 @@
                         </a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">|
+                        <a class="nav-link" href="#">
                         </a>
                     </li>
                     <li class="nav-item active">
@@ -55,7 +77,7 @@
                         </a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">|
+                        <a class="nav-link" href="#">
                         </a>
                     </li>
                     <li class="nav-item active">
@@ -82,7 +104,7 @@
                         </a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">|
+                        <a class="nav-link" href="#">
                         </a>
                     </li>
                     <li class="nav-item active">
@@ -90,7 +112,7 @@
                         </a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">|
+                        <a class="nav-link" href="#">
                         </a>
                     </li>
                     <li class="nav-item active">
@@ -98,7 +120,7 @@
                         </a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">|
+                        <a class="nav-link" href="#">
                         </a>
                     </li>
                     <li class="nav-item active">
@@ -113,6 +135,50 @@
 
 {% block contenu %}sample content{% endblock %}
 
+<!-- Modal Connexion-->
+<div class="modal fade" id="connexion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Vous êtes connecté</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Bienvenue {{ user.username }} !
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Connexion-->
+<div class="modal fade" id="deconnexion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Vous êtes deconnecté</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                A la prochaine !
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+</div>
+
 <!-- Footer -->
 <footer class="py-5 bg-dark">
     <div class="container">
@@ -121,9 +187,6 @@
     <!-- /.container -->
 </footer>
 
-<!-- Bootstrap core JavaScript -->
-<script src="{% static 'core/vendor/jquery/jquery.min.js' %}"></script>
-<script src="{% static 'core/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
 </body>
 
