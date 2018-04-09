@@ -1,0 +1,79 @@
+{% extends "core/baseCore.html" %} <!--Permet d'importer les blocs de base.html-->
+{% load static %}
+
+{% block titre %}{{ global.WEBSITE_NOM }}{% endblock %}
+
+{% block contenu %}
+
+    <header>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <!-- Slide One - Set the background image for this slide in the line below -->
+                <div class="carousel-item active"
+                     style="background-image: url('{% static 'core/img/sora_no_woto_.jpg' %}')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>Le Blog</h3>
+                        <p>Rendez vous ici pour lire divers articles écris par notre communautée</p>
+                        <p><a href="{% url 'blogHome' %}">
+                            <button class="btn">Go !</button>
+                        </a></p>
+                    </div>
+                </div>
+                <!-- Slide Two - Set the background image for this slide in the line below -->
+                <div class="carousel-item"
+                     style="background-image: url('{% static 'core/img/sora_no_woto_.jpg' %}')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>La gallerie</h3>
+                        <p>C'est ici pour observer le travail de nos artistes</p>
+                        <p>
+                            <button class="btn">Go !</button>
+                        </p>
+                    </div>
+                </div>
+                <!-- Slide Three - Set the background image for this slide in the line below -->
+                <div class="carousel-item"
+                     style="background-image: url('{% static 'core/img/sora_no_woto_.jpg' %}')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>La bibliothèque</h3>
+                        <p>Lisez les textes de nos membre, et en plus, c'est gratuit !</p>
+                        <p>
+                            <button class="btn">Go !</button>
+                        </p>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                   data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                   data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+    </header>
+
+    <!-- Page Content -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1>Bienvenue sur le site Web de la communauté Ezo 2 !</h1>
+                </div>
+                <div class="offset-md-2 col-md-8 text-center">
+                    <p>Cette page vous permet de vous connecter à votre compte, d'en créer un et
+                        d'accéder
+                        aux différentes partie de notre site.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}

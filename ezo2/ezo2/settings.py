@@ -26,7 +26,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-MEDIA_ROOT = BASE_DIR + '/static/img/'
+MEDIA_ROOT = BASE_DIR + '/static/'
 MEDIA_URL = '/media/'
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'core',
 ]
 
 MIDDLEWARE = [
@@ -78,12 +79,8 @@ WSGI_APPLICATION = 'ezo2.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',  # Backends disponibles : 'postgresql', 'mysql', 'sqlite3' et 'oracle'.
-        'NAME': 'ezo2',  # Nom de la base de données
-        'USER': 'root',
-        'PASSWORD': 'Jioshield13',
-        'HOST': '',  # Utile si votre base de données est sur une autre machine
-        'PORT': '',  # ... et si elle utilise un autre port que celui par défaut
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
