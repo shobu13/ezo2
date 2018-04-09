@@ -56,11 +56,24 @@
             <hr/>
             <div class="row">
                 <div class="offset-md-2 col-md-8">
-                    <div class="row">
-                        <div class="offset-md-6 col-md-6 card-body">
-                            {{ user.profil.description }}
+                    {% for user in user_liste %}
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="{{ user.profil.avatar.url }}"
+                                     alt="{{ user.profil.avatar.name }}"
+                                     class="img-fluid rounded-circle" height="100px">
+                            </div>
+                            <div class="offset-md-3 col-md-6">
+                                <div class="card mb-4" style="height: 100%">
+                                    <h2 class="card-footer"
+                                        style="background-color: #bebebe">{{ user.username }}</h2>
+                                    <p class="card-text"
+                                       style="padding: 5px">{{ user.profil.description }}</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                        <hr/>
+                    {% endfor %}
                 </div>
             </div>
         </div>

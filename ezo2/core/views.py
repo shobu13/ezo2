@@ -15,7 +15,8 @@ def home(request):
 
 def a_propos(request):
     """vue affichant diverse informations sur la communauté et ses membres."""
-    return render(request, 'core/aPropos.html', {'global': global_var})
+    user_liste = User.objects.filter(is_staff=True).exclude(username='admin')
+    return render(request, 'core/aPropos.html', {'global': global_var, 'user_liste': user_liste, })
 
 
 def connexion(request):
