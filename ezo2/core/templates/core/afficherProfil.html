@@ -1,0 +1,55 @@
+{% extends "core/baseCore.html" %} <!--Permet d'importer les blocs de base.html-->
+{% load static %}
+
+{% block titre %}{{ global.WEBSITE_NOM }} - A propos{% endblock %}
+
+{% block contenu %}
+
+    {% comment %}<header>
+        <!-- Header -->
+        <div class="carousel-item active"
+             style="background-image: url('{% static 'core/img/sora_no_woto_.jpg' %}')">
+            <div class="carousel-caption d-none d-md-block">
+                <h3>A propos de nous</h3>
+                <p>Mais qu'est que c'est que donc Ezo II ?</p>
+            </div>
+        </div>
+    </header>{% endcomment %}
+    <br/>
+    <!-- Page Content -->
+    <section class="py-5">
+        <div class="container">
+            <!-- Blog Entries Column -->
+            <div class="row">
+                <div class="offset-md-2 col-md-8">
+                    <form method="post" action="#">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h1>Profil de {{ user.username }}</h1>
+                                <hr/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h4>description : </h4>
+                                <textarea cols="60" rows="10"
+                                          class="form-control"
+                                          name="description">{{ user.profil.description }}</textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="offset-md-8 col-md-4">
+                                <input type="submit" class="btn btn-primary btn-block"
+                                       style="margin-top: 5px" value="enregistrer"/>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr/>
+        </div>
+    </section>
+
+
+{% endblock %}

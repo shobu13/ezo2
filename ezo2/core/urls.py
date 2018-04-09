@@ -22,5 +22,6 @@ urlpatterns = [
     path('connexion', views.connexion, name='connexion'),
     path('inscription', views.inscription, name='inscription'),
     path('deconnexion', views.deconnexion, name='deconnexion'),
+    path('afficher_profil', views.afficher_profil, name='afficherProfil')
 ]
 

@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 class Profil(models.Model):
     """Extension du modèle utilisateur de base pour rajouter des champs de profil."""
-    user = models.OneToOneField(User)
+    user = models.OneToOneField(User, on_delete=models.PROTECT)
     description = models.TextField(null=True, blank=True)
 
     def __str__(self):
