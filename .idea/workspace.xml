@@ -44,8 +44,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ezo2/core/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="45" column="4" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
+            <state relative-caret-position="510">
+              <caret line="68" column="29" lean-forward="true" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
               <folding>
                 <element signature="e#72#126#0" expanded="true" />
               </folding>
@@ -65,8 +65,8 @@
       <file leaf-file-name="afficherProfil.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ezo2/core/templates/core/afficherProfil.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="71" column="28" lean-forward="true" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="37" />
+            <state relative-caret-position="491">
+              <caret line="68" selection-start-line="68" selection-end-line="68" />
             </state>
           </provider>
         </entry>
@@ -74,7 +74,7 @@
       <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ezo2/core/templates/core/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
+            <state relative-caret-position="17">
               <caret line="76" selection-start-line="76" selection-end-line="96" selection-end-column="6" />
             </state>
           </provider>
@@ -83,8 +83,8 @@
       <file leaf-file-name="baseCore.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ezo2/core/templates/core/baseCore.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="46" column="29" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
+            <state relative-caret-position="423">
+              <caret line="174" column="42" selection-end-line="188" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -131,8 +131,8 @@
         <option value="$PROJECT_DIR$/ezo2/core/templates/core/aPropos.html" />
         <option value="$PROJECT_DIR$/ezo2/core/models.py" />
         <option value="$PROJECT_DIR$/ezo2/static/core/css/custom.css" />
-        <option value="$PROJECT_DIR$/ezo2/core/views.py" />
         <option value="$PROJECT_DIR$/ezo2/core/templates/core/home.html" />
+        <option value="$PROJECT_DIR$/ezo2/core/views.py" />
         <option value="$PROJECT_DIR$/ezo2/core/templates/core/afficherProfil.html" />
         <option value="$PROJECT_DIR$/ezo2/core/templates/core/baseCore.html" />
       </list>
@@ -155,7 +155,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -214,6 +213,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -303,7 +303,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3298292" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5005208" side_tool="true" weight="0.33368757" />
@@ -311,8 +310,8 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3298292" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3298292" />
-      <window_info anchor="bottom" x="-165" y="537" width="1920" height="277" id="Terminal" order="11" sideWeight="0.49947917" visible="true" weight="0.282678" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.499002" visible="true" weight="0.25885418" />
+      <window_info active="true" anchor="bottom" x="-165" y="537" width="1920" height="277" id="Terminal" order="11" sideWeight="0.49947917" visible="true" weight="0.282678" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.499002" visible="true" weight="0.25885418" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -641,9 +640,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="55" column="24" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="27" />
-          <folding>
-            <element signature="n#style#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -663,8 +659,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ezo2/core/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="45" column="4" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
+        <state relative-caret-position="510">
+          <caret line="68" column="29" lean-forward="true" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
           <folding>
             <element signature="e#72#126#0" expanded="true" />
           </folding>
@@ -673,22 +669,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ezo2/core/templates/core/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
+        <state relative-caret-position="17">
           <caret line="76" selection-start-line="76" selection-end-line="96" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ezo2/core/templates/core/afficherProfil.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="71" column="28" lean-forward="true" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="37" />
+        <state relative-caret-position="491">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ezo2/core/templates/core/baseCore.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="46" column="29" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
+        <state relative-caret-position="423">
+          <caret line="174" column="42" selection-end-line="188" selection-end-column="7" />
         </state>
       </provider>
     </entry>

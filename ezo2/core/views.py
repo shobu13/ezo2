@@ -44,7 +44,7 @@ def connexion(request):
 def afficher_profil(request):
     """affiche le profil de l'utilisateur connecté et permet la modification de la description ainsi que de l'image de
     l'utilisateur connecté"""
-    img_error = None
+    error=[]
     if request.method == "POST":
         description = request.POST['description']
         if request.FILES:
@@ -53,21 +53,22 @@ def afficher_profil(request):
             img = request.FILES['avatar']
             image_dimension = get_image_dimensions(img)
             if image_dimension[1] > 1000:
-                img_error = "l'image à une hauteur supérieur à 1000px"
+                error.append("l'image à une hauteur supérieur à 1000px")
         print(request.POST)
         user = request.user
-        try:
-            user.profil.description = description
-            if not img_error:
-                user.profil.save()
-        except:
-            if not img_error:
-                profil = Profil(user=user, description=description, avatar=img)
-            else:
-                profil = Profil(user=user, description=description)
-            profil.save()
+        if not error:
+            try:
+                user.profil.description = description
+                if request.FILES:
+                    user.profil.save()
+            except:
+                if request.FILES:
+                    profil = Profil(user=user, description=description, avatar=img)
+                else:
+                    profil = Profil(user=user, description=description)
+                profil.save()
 
-    return render(request, "core/afficherProfil.html", {'global': global_var, "img_error": img_error})
+    return render(request, "core/afficherProfil.html", {'global': global_var, "error": error})
 
 
 def deconnexion(request):
