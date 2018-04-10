@@ -3,12 +3,17 @@
   <component name="AnalysisUIOptions">
     <option name="SCOPE_TYPE" value="3" />
   </component>
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/ezo2/core/templates/core/baseCore.html" line="16" />
+    <bookmark url="file://$PROJECT_DIR$/ezo2/core/views.py" line="54" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="bd128007-f6d4-4bee-9877-fc70d97ee569" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/ezo2/static/core/img/750x300.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ezo2/static/core/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ezo2Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ezo2Project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ezo2/core/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ezo2/core/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ezo2/core/templates/core/aPropos.html" beforeDir="false" afterPath="$PROJECT_DIR$/ezo2/core/templates/core/aPropos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ezo2/core/templates/core/afficherProfil.html" beforeDir="false" afterPath="$PROJECT_DIR$/ezo2/core/templates/core/afficherProfil.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ezo2/core/templates/core/baseCore.html" beforeDir="false" afterPath="$PROJECT_DIR$/ezo2/core/templates/core/baseCore.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ezo2/core/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ezo2/core/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ezo2/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/ezo2/db.sqlite3" afterDir="false" />
@@ -28,32 +33,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="baseCore.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ezo2/core/templates/core/baseCore.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="16" column="71" lean-forward="true" selection-start-line="16" selection-start-column="71" selection-end-line="16" selection-end-column="71" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ezo2/core/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="62" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="51">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ezo2/core/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="97" selection-start-line="18" selection-start-column="97" selection-end-line="18" selection-end-column="97" />
+            <state relative-caret-position="493">
+              <caret line="68" column="63" lean-forward="true" selection-start-line="68" selection-start-column="63" selection-end-line="68" selection-end-column="63" />
               <folding>
                 <element signature="e#72#126#0" expanded="true" />
               </folding>
@@ -65,66 +58,33 @@
         <entry file="file://$PROJECT_DIR$/ezo2/core/admin.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
-              <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ezo2/core/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="24" column="71" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="71" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="aPropos.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="aPropos.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ezo2/core/templates/core/aPropos.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="74" column="29" selection-start-line="74" selection-start-column="29" selection-end-line="74" selection-end-column="29" />
-              <folding>
-                <element signature="e#3247#3267#0#HTML" expanded="true" />
-                <element signature="e#2975#3008#0#HTML" expanded="true" />
-                <element signature="e#3038#3058#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="afficherProfil.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ezo2/core/templates/core/afficherProfil.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+            <state relative-caret-position="799">
+              <caret line="62" column="23" selection-start-line="62" selection-start-column="23" selection-end-line="62" selection-end-column="23" />
               <folding>
-                <element signature="e#1669#1692#0#HTML" expanded="true" />
+                <element signature="e#2228#2277#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contact.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ezo2/blog/templates/blog/contact.html">
+      <file leaf-file-name="baseCore.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ezo2/core/templates/core/baseCore.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
-              <caret line="55" column="24" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="27" />
-              <folding>
-                <element signature="n#style#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tuto.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ezo2/static/blog/css/tuto.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+            <state relative-caret-position="272">
+              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -134,9 +94,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="Python Script" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -168,12 +128,13 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/ezo2/core/urls.py" />
         <option value="$PROJECT_DIR$/ezo2/core/admin.py" />
+        <option value="$PROJECT_DIR$/ezo2/static/blog/css/tuto.css" />
+        <option value="$PROJECT_DIR$/ezo2/core/templates/core/aPropos.html" />
+        <option value="$PROJECT_DIR$/ezo2/core/models.py" />
+        <option value="$PROJECT_DIR$/ezo2/static/core/css/custom.css" />
+        <option value="$PROJECT_DIR$/ezo2/core/templates/core/baseCore.html" />
         <option value="$PROJECT_DIR$/ezo2/core/templates/core/afficherProfil.html" />
         <option value="$PROJECT_DIR$/ezo2/core/views.py" />
-        <option value="$PROJECT_DIR$/ezo2/core/models.py" />
-        <option value="$PROJECT_DIR$/ezo2/static/blog/css/tuto.css" />
-        <option value="$PROJECT_DIR$/ezo2/core/templates/core/baseCore.html" />
-        <option value="$PROJECT_DIR$/ezo2/core/templates/core/aPropos.html" />
       </list>
     </option>
   </component>
@@ -194,7 +155,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -211,22 +171,22 @@
               <item name="ezo2Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="ezo2Project" type="462c0819:PsiDirectoryNode" />
               <item name="ezo2" type="462c0819:PsiDirectoryNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ezo2Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="ezo2Project" type="462c0819:PsiDirectoryNode" />
               <item name="ezo2" type="462c0819:PsiDirectoryNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ezo2Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="ezo2Project" type="462c0819:PsiDirectoryNode" />
               <item name="ezo2" type="462c0819:PsiDirectoryNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ezo2Project" type="b2602c69:ProjectViewProjectNode" />
@@ -239,20 +199,21 @@
               <item name="ezo2Project" type="462c0819:PsiDirectoryNode" />
               <item name="ezo2" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ezo2Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="ezo2Project" type="462c0819:PsiDirectoryNode" />
               <item name="ezo2" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -341,22 +302,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3298292" />
-      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5005208" side_tool="true" weight="0.33368757" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3298292" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3298292" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.33377135" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.499002" visible="true" weight="0.259375" />
+      <window_info active="true" anchor="bottom" x="-165" y="537" width="1920" height="277" id="Terminal" order="11" sideWeight="0.49947917" visible="true" weight="0.282678" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.499002" visible="true" weight="0.25885418" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info id="Structure" order="1" sideWeight="0.500998" side_tool="true" weight="0.47368422" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Structure" order="0" sideWeight="0.500998" side_tool="true" weight="0.47368422" />
+      <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -375,20 +335,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ezo2/blog/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ezo2/blog/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="31" lean-forward="true" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ezo2/blog/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -586,13 +532,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../template bootstrap/startbootstrap-clean-blog-gh-pages/startbootstrap-clean-blog-gh-pages/post.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1547">
-          <caret line="118" column="8" lean-forward="true" selection-start-line="54" selection-start-column="4" selection-end-line="118" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/template bootstrap/startbootstrap-clean-blog-gh-pages/startbootstrap-clean-blog-gh-pages/post.html" />
     <entry file="file://$PROJECT_DIR$/ezo2/ezo2/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -600,13 +540,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../template bootstrap/startbootstrap-half-slider-gh-pages/startbootstrap-half-slider-gh-pages/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="43" lean-forward="true" selection-end-line="116" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/template bootstrap/startbootstrap-half-slider-gh-pages/startbootstrap-half-slider-gh-pages/index.html" />
     <entry file="file://$PROJECT_DIR$/ezo2/ezo2/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="254">
@@ -642,41 +576,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ezo2/static/core/css/connexion.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ezo2/core/templates/core/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="68" column="60" selection-start-line="68" selection-start-column="60" selection-end-line="68" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ezo2/core/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="33" column="57" selection-start-line="33" selection-start-column="57" selection-end-line="33" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ezo2/core/templates/core/inscription.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="16" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ezo2/core/templates/core/connexion.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="37" column="51" lean-forward="true" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ezo2/static/core/css/connexion.css" />
+    <entry file="file://$PROJECT_DIR$/ezo2/core/templates/core/home.html" />
+    <entry file="file://$PROJECT_DIR$/ezo2/core/forms.py" />
+    <entry file="file://$PROJECT_DIR$/ezo2/core/templates/core/inscription.html" />
+    <entry file="file://$PROJECT_DIR$/ezo2/core/templates/core/connexion.html" />
     <entry file="file://$PROJECT_DIR$/ezo2/blog/templates/blog/baseBlog.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="816">
@@ -684,13 +588,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="6" selection-start-column="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore" />
     <entry file="file://$PROJECT_DIR$/ezo2/blog/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -698,37 +596,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ezo2/core/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="24" column="71" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ezo2/core/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="97" selection-start-line="18" selection-start-column="97" selection-end-line="18" selection-end-column="97" />
-          <folding>
-            <element signature="e#72#126#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ezo2/core/urls.py" />
     <entry file="file://$PROJECT_DIR$/ezo2/blog/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="16" column="116" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="116" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ezo2/core/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -739,26 +611,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ezo2/core/templates/core/afficherProfil.html">
+    <entry file="file://$PROJECT_DIR$/ezo2/static/blog/css/clean-blog.css" />
+    <entry file="file://$PROJECT_DIR$/ezo2/static/blog/css/tuto.css" />
+    <entry file="file://$PROJECT_DIR$/ezo2/core/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
-          <folding>
-            <element signature="e#1669#1692#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ezo2/static/blog/css/clean-blog.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="173" column="17" lean-forward="true" selection-start-line="173" selection-start-column="17" selection-end-line="173" selection-end-column="17" />
+        <state relative-caret-position="51">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ezo2/blog/templates/blog/contact.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
+        <state relative-caret-position="17">
           <caret line="55" column="24" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="27" />
           <folding>
             <element signature="n#style#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -766,38 +630,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ezo2/core/models.py">
+    <entry file="file://$PROJECT_DIR$/ezo2/static/core/css/custom.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="62" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ezo2/static/blog/css/tuto.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+        <state relative-caret-position="306">
+          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ezo2/core/templates/core/baseCore.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="16" column="71" lean-forward="true" selection-start-line="16" selection-start-column="71" selection-end-line="16" selection-end-column="71" />
+        <state relative-caret-position="272">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ezo2/core/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/ezo2/core/templates/core/aPropos.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ezo2/core/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="74" column="29" selection-start-line="74" selection-start-column="29" selection-end-line="74" selection-end-column="29" />
+        <state relative-caret-position="51">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ezo2/core/templates/core/afficherProfil.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="62" column="23" selection-start-line="62" selection-start-column="23" selection-end-line="62" selection-end-column="23" />
           <folding>
-            <element signature="e#3247#3267#0#HTML" expanded="true" />
-            <element signature="e#2975#3008#0#HTML" expanded="true" />
-            <element signature="e#3038#3058#0#HTML" expanded="true" />
+            <element signature="e#2228#2277#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ezo2/core/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="68" column="63" lean-forward="true" selection-start-line="68" selection-start-column="63" selection-end-line="68" selection-end-column="63" />
+          <folding>
+            <element signature="e#72#126#0" expanded="true" />
           </folding>
         </state>
       </provider>

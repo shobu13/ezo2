@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect, reverse
 import global_var
 from django.contrib.auth.models import User
 from django.contrib.auth import login, logout, authenticate
+from django.core.files.images import get_image_dimensions
 
 from core.forms import CreateUserForm, ConnexionForm
 from core.models import Profil
@@ -44,6 +45,22 @@ def afficher_profil(request):
     """affiche le profil de l'utilisateur connecté et permet sa mofification"""
     if request.method == "POST":
         description = request.POST['description']
+        if request.FILES:
+            print("FILES= ", request.FILES)
+            print("AVATAR= ", request.FILES['avatar'])
+            img = request.FILES['avatar']
+            image_dimension = get_image_dimensions(img)
+            if image_dimension[1] > 1000:
+                img_error = "l'image à une hauteur supérieur à 1000px"
+            else:
+                try:
+                    user.profil.description = description
+                    user.profil.avatar = img
+                    user.profil.save()
+                except:
+                    profil = Profil(user=user, description=description, avatar=img)
+                    profil.save()
+        print(request.POST)
         user = request.user
         try:
             user.profil.description = description
@@ -52,7 +69,7 @@ def afficher_profil(request):
             profil = Profil(user=user, description=description)
             profil.save()
 
-    return render(request, "core/afficherProfil.html", {'global': global_var, })
+    return render(request, "core/afficherProfil.html", {'global': global_var, "img_error": img_error})
 
 
 def deconnexion(request):

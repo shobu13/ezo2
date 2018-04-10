@@ -22,7 +22,7 @@
             <!-- Blog Entries Column -->
             <div class="row">
                 <div class="offset-md-2 col-md-8">
-                    <form method="post" action="#">
+                    <form method="post" action="#" enctype="multipart/form-data">
                         {% csrf_token %}
                         <div class="row">
                             <div class="col-md-12">
@@ -38,6 +38,22 @@
                                           name="description">{{ user.profil.description }}</textarea>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>Avatar : </h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="{{ user.profil.avatar.url }}" class="img-fluid rounded-circle">
+                            </div>
+                            <div class="offset-md-2 col-md-3 align-self-end">
+                                <label class="btn btn-primary btn-file btn-block" style="background-color: #b527ff; border: unset;">
+                                    Parcourir<input type="file" name="avatar">
+                                </label>
+                            </div>
+                        </div>
+                        <hr/>
                         <div class="row">
                             <div class="offset-md-8 col-md-4">
                                 <input type="submit" class="btn btn-primary btn-block"
