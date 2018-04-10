@@ -4,10 +4,10 @@ import global_var
 from django.contrib.auth.models import User
 from django.contrib.auth import login, logout, authenticate
 from django.core.files.images import get_image_dimensions
+from django.core.files import File
 
 from core.forms import CreateUserForm, ConnexionForm
 from core.models import Profil
-
 
 def home(request):
     """affiche la page d'acceuil du core"""
@@ -44,7 +44,7 @@ def connexion(request):
 def afficher_profil(request):
     """affiche le profil de l'utilisateur connecté et permet la modification de la description ainsi que de l'image de
     l'utilisateur connecté"""
-    error=[]
+    error = []
     if request.method == "POST":
         description = request.POST['description']
         if request.FILES:
@@ -52,8 +52,11 @@ def afficher_profil(request):
             print("AVATAR= ", request.FILES['avatar'])
             img = request.FILES['avatar']
             image_dimension = get_image_dimensions(img)
+            image_size = img.size / 1000000
             if image_dimension[1] > 1000:
                 error.append("l'image à une hauteur supérieur à 1000px")
+            if image_size > 1:
+                error.append("L'image dépasse la taille autorisée (1Mo)")
         print(request.POST)
         user = request.user
         if not error:
