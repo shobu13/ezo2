@@ -79,20 +79,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ezo2/core/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="24" column="71" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="71" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="aPropos.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="aPropos.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ezo2/core/templates/core/aPropos.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="593">
               <caret line="74" column="29" selection-start-line="74" selection-start-column="29" selection-end-line="74" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -164,7 +164,6 @@
         <option value="$PROJECT_DIR$/ezo2/core/templates/core/inscription.html" />
         <option value="$PROJECT_DIR$/ezo2/core/templates/core/connexion.html" />
         <option value="$PROJECT_DIR$/ezo2/blog/templates/blog/baseBlog.html" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/ezo2/core/urls.py" />
         <option value="$PROJECT_DIR$/ezo2/core/admin.py" />
         <option value="$PROJECT_DIR$/ezo2/static/blog/css/tuto.css" />
@@ -177,6 +176,7 @@
         <option value="P:/python/bot discord/Shobot.py" />
         <option value="$PROJECT_DIR$/ezo2/core/views.py" />
         <option value="$PROJECT_DIR$/ezo2/ezo2/settings.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -339,6 +339,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3298292" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5005208" side_tool="true" weight="0.33368757" />
@@ -616,7 +617,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore" />
     <entry file="file://$PROJECT_DIR$/ezo2/blog/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -733,6 +733,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="593">
           <caret line="74" column="29" selection-start-line="74" selection-start-column="29" selection-end-line="74" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
         </state>
       </provider>
     </entry>
