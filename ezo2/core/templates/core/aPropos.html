@@ -1,5 +1,7 @@
 {% extends "core/baseCore.html" %} <!--Permet d'importer les blocs de base.html-->
+
 {% load static %}
+{% load markdown_filter %}
 
 {% block titre %}{{ global.WEBSITE_NOM }} - A propos{% endblock %}
 
@@ -68,7 +70,7 @@
                                     <h2 class="card-footer"
                                         style="background-color: #bebebe">{{ user.username }}</h2>
                                     <p class="card-text"
-                                       style="padding: 5px">{{ user.profil.description }}</p>
+                                       style="padding: 5px">{{ user.profil.description|markdownify|safe }}</p>
                                 </div>
                             </div>
                         </div>
