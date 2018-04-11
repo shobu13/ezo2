@@ -30,12 +30,17 @@
                                 <hr/>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row markdownx">
                             <div class="col-md-12">
+
                                 <h4>description : </h4>
                                 <textarea cols="60" rows="10"
-                                          class="form-control"
-                                          name="description">{{ user.profil.description }}</textarea>
+                                          class="form-control markdownx-editor"
+                                          name="description" data-markdownx-editor-resizable
+                                          data-markdownx-urls-path="/markdownx/markdownify/"
+                                          data-markdownx-upload-urls-path="/markdownx/upload/"
+                                          data-markdownx-latency="500">{{ user.profil.description }}</textarea>
+                                <div class="markdownx-preview"></div>
                             </div>
                         </div>
                         <div class="row">
@@ -48,7 +53,8 @@
                                 <img src="{{ user.profil.avatar.url }}" class="img-fluid rounded-circle">
                             </div>
                             <div class="offset-md-2 col-md-3 align-self-end">
-                                <label class="btn btn-primary btn-file btn-block" style="background-color: #b527ff; border: unset;">
+                                <label class="btn btn-primary btn-file btn-block"
+                                       style="background-color: #b527ff; border: unset;">
                                     Parcourir<input type="file" name="avatar">
                                 </label>
                             </div>
