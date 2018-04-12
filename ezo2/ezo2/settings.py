@@ -127,3 +127,7 @@ STATICFILES_DIRS = (
 )
 
 STATIC_ROOT = os.path.join(BASE_DIR, "static_root")
+
+#django-markdownx config :
+
+MARKDOWNX_UPLOAD_MAX_SIZE = 1 * 1024 * 1024
