@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.urls import path
 from blog import views       # on importe le module contenant nos vues
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
 
 
 urlpatterns = [
@@ -31,3 +33,5 @@ urlpatterns = [
     path('blog/article_liste/<int:page>/<str:keywords>/<str:selected_cat>', views.article_liste,
          name='article_liste'),
 ]
+
+urlpatterns += staticfiles_urlpatterns()

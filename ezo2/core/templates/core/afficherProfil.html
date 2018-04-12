@@ -1,4 +1,5 @@
 {% extends "core/baseCore.html" %} <!--Permet d'importer les blocs de base.html-->
+
 {% load static %}
 
 {% block titre %}{{ global.WEBSITE_NOM }} - A propos{% endblock %}
@@ -31,11 +32,42 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-6">
                                 <h4>description : </h4>
+                            </div>
+                        </div>
+                        <div class="row markdownx">
+                            <div class="col-md-8">
                                 <textarea cols="60" rows="10"
-                                          class="form-control"
-                                          name="description">{{ user.profil.description }}</textarea>
+                                          class="form-control markdownx-editor"
+                                          name="description" data-markdownx-editor-resizable
+                                          data-markdownx-urls-path="/markdownx/markdownify/"
+                                          data-markdownx-upload-urls-path="/markdownx/upload/"
+                                          data-markdownx-latency="500"
+                                          style="resize: none">{{ user.profil.description }}</textarea>
+                                <div class="markdownx-preview"></div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h6>pense bête Markdown </h6>
+                                    </div>
+                                </div>
+                                <hr/>
+                                <div class="row">
+                                    <div class="col-md-12"
+                                         style="border: #ced4da solid 1px; height: 200px;">
+                                        <code>
+                                            gras : **mot**<br/>
+                                            itallique : *mot*<br/>
+                                            #titre<br/>
+                                            ##titre2<br/>
+                                            * liste à puce<br/>
+                                            [lien](http://)<br/>
+                                            ![image](http://)<br/>
+                                        </code>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="row">
@@ -45,10 +77,12 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <img src="{{ user.profil.avatar.url }}" class="img-fluid rounded-circle">
+                                <img src="{{ user.profil.avatar.url }}"
+                                     class="img-fluid rounded-circle">
                             </div>
                             <div class="offset-md-2 col-md-3 align-self-end">
-                                <label class="btn btn-primary btn-file btn-block" style="background-color: #b527ff; border: unset;">
+                                <label class="btn btn-primary btn-file btn-block"
+                                       style="background-color: #b527ff; border: unset;">
                                     Parcourir<input type="file" name="avatar">
                                 </label>
                             </div>

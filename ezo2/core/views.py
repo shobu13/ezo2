@@ -47,6 +47,7 @@ def afficher_profil(request):
     error = []
     if request.method == "POST":
         description = request.POST['description']
+        print("description= ", description)
         if request.FILES:
             print("FILES= ", request.FILES)
             print("AVATAR= ", request.FILES['avatar'])
@@ -57,13 +58,17 @@ def afficher_profil(request):
                 error.append("l'image à une hauteur supérieur à 1000px")
             if image_size > 1:
                 error.append("L'image dépasse la taille autorisée (1Mo)")
+        print("error", error)
         print(request.POST)
         user = request.user
         if not error:
             try:
+                print("desc user= ", user.profil.description)
                 user.profil.description = description
+                print("nouvelle desc= ", user.profil.description)
                 if request.FILES:
-                    user.profil.save()
+                    user.profil.avatar = img
+                user.profil.save()
             except:
                 if request.FILES:
                     profil = Profil(user=user, description=description, avatar=img)

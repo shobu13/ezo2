@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.urls import path
 from core import views
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('', views.home, name='coreHome'),
@@ -25,3 +26,4 @@ urlpatterns = [
     path('afficher_profil', views.afficher_profil, name='afficherProfil')
 ]
 
+urlpatterns += staticfiles_urlpatterns()
