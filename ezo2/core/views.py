@@ -1,7 +1,7 @@
 """Module servant à afficher les pages composant l'application Core."""
 from django.shortcuts import render, redirect, reverse
 import global_var
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Group
 from django.contrib.auth import login, logout, authenticate
 from django.core.files.images import get_image_dimensions
 from django.core.files import File
@@ -16,8 +16,22 @@ def home(request):
 
 def a_propos(request):
     """vue affichant diverse informations sur la communauté et ses membres."""
-    user_liste = User.objects.filter(is_staff=True).exclude(username='admin')
-    return render(request, 'core/aPropos.html', {'global': global_var, 'user_liste': user_liste, })
+    staff_group = Group.objects.get(name='staff')
+    artistes_group = Group.objects.get(name='artistes')
+    staff_liste = User.objects.filter(groups=staff_group, profil__isnull=False).exclude(username='admin').exclude(groups=artistes_group)
+    artistes_liste = User.objects.filter(groups=artistes_group, profil__isnull=False).exclude(username='admin')
+    # for i in artistes_liste:
+    #     try:
+    #         i.profil
+    #     except:
+    #         artistes_liste.get(username=i.username).delete()
+    #
+    # for i in staff_liste:
+    #     try:
+    #         i.profil
+    #     except:
+    #         staff_liste.get(username=i.username).delete()
+    return render(request, 'core/aPropos.html', {'global': global_var, 'staff_liste': staff_liste, 'artistes_liste':artistes_liste, })
 
 
 def connexion(request):

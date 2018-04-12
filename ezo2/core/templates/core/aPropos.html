@@ -58,7 +58,36 @@
             <hr/>
             <div class="row">
                 <div class="offset-md-2 col-md-8">
-                    {% for user in user_liste %}
+                    <div class="row">
+                        <div class="offset-md-2 col-md-8 text-center">
+                            <h4>Le staff :</h4>
+                            <hr/>
+                        </div>
+                    </div>
+                    {% for user in staff_liste %}
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="{{ user.profil.avatar.url }}"
+                                     alt="{{ user.profil.avatar.name }}"
+                                     class="img-fluid rounded-circle" height="100px">
+                            </div>
+                            <div class="offset-md-3 col-md-6">
+                                <div class="card mb-4" style="height: 100%">
+                                    <h2 class="card-footer"
+                                        style="background-color: #bebebe">{{ user.username }}</h2>
+                                    <p class="card-text">{{ user.profil.description|markdownify|safe }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr/>
+                    {% endfor %}
+                    <div class="row">
+                        <div class="offset-md-2 col-md-8 text-center">
+                            <h4>Les artistes :</h4>
+                            <hr/>
+                        </div>
+                    </div>
+                    {% for user in artistes_liste %}
                         <div class="row">
                             <div class="col-md-3">
                                 <img src="{{ user.profil.avatar.url }}"
