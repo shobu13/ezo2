@@ -18,8 +18,19 @@ def a_propos(request):
     """vue affichant diverse informations sur la communauté et ses membres."""
     staff_group = Group.objects.get(name='staff')
     artistes_group = Group.objects.get(name='artistes')
-    staff_liste = User.objects.filter(groups=staff_group).exclude(username='admin')
-    artistes_liste = User.objects.filter(groups=artistes_group).exclude(username='admin')
+    staff_liste = User.objects.filter(groups=staff_group, profil__isnull=False).exclude(username='admin').exclude(groups=artistes_group)
+    artistes_liste = User.objects.filter(groups=artistes_group, profil__isnull=False).exclude(username='admin')
+    # for i in artistes_liste:
+    #     try:
+    #         i.profil
+    #     except:
+    #         artistes_liste.get(username=i.username).delete()
+    #
+    # for i in staff_liste:
+    #     try:
+    #         i.profil
+    #     except:
+    #         staff_liste.get(username=i.username).delete()
     return render(request, 'core/aPropos.html', {'global': global_var, 'staff_liste': staff_liste, 'artistes_liste':artistes_liste, })
 
 
