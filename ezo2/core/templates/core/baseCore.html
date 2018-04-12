@@ -14,7 +14,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="{% static 'core/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-    {#    <link href="{% static 'blog/css/tuto.css' %}" rel="stylesheet">#}
+{#    <link href="{% static 'blog/css/tuto.css' %}" rel="stylesheet">#}
 
     <!-- Custom styles for this template -->
     <link href="{% static 'core/css/half-slider.css' %}" rel="stylesheet">
@@ -22,6 +22,8 @@
     <!-- Bootstrap core JavaScript -->
     <script src="{% static 'core/vendor/jquery/jquery.min.js' %}"></script>
     <script src="{% static 'core/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <script type="text/javascript" src="/static/markdownx/js/markdownx.js"></script>
     {% if connexion %}
         <script type="text/javascript">
             $(document).ready(function () {
