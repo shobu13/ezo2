@@ -24,6 +24,9 @@
     <script src="{% static 'core/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
     <script type="text/javascript" src="/static/markdownx/js/markdownx.js"></script>
+
+{# affichage des modaux au chargement de la page #}
+    {# si l'utilisateur vient de se connecter #}
     {% if connexion %}
         <script type="text/javascript">
             $(document).ready(function () {
@@ -33,6 +36,8 @@
             });
         </script>
     {% endif %}
+
+    {# si l'utilisateur vient de se déconnecter #}
     {% if deconnexion %}
         <script type="text/javascript">
             $(document).ready(function () {
@@ -42,6 +47,8 @@
             });
         </script>
     {% endif %}
+
+    {# si une erreur quelquonque est survenue #}
     {% if error %}
         <script type="text/javascript">
             $(document).ready(function () {
@@ -161,7 +168,7 @@
 </footer>
 
 
-<!-- Modal erreur-->
+<!-- Modal erreur -->
 <div class="modal fade" id="img_error" tabindex="-1" role="dialog"
      aria-labelledby="exampleModalLabel"
      aria-hidden="true">

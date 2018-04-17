@@ -22,7 +22,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('blog.urls')),
     path('', include('core.urls')),
+
+    # addon url
     path('markdownx/', include('markdownx.urls')),
+    path('oauth/', include('social_django.urls', namespace='social')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
