@@ -2,3 +2,7 @@ venv/
 .idea/
 *.pyc
 *.pyc
+
+ezo2/blog/migrations/__pycache__/
+
+ezo2/core/migrations/__pycache__/
