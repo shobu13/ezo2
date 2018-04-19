@@ -1,3 +1,4 @@
+# coding: utf8
 """Module servant à afficher les pages composant l'application Core."""
 from django.shortcuts import render, redirect, reverse
 import global_var
