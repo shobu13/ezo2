@@ -22,12 +22,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'bsmb%s5y(w=e1ffcs1x%2asg2-u_u$)h4+dgqu-@=5r(v1%q!e'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
-MEDIA_ROOT = BASE_DIR + '/static/'
-MEDIA_URL = '/media/'
 
 # Application definition
 
@@ -38,7 +36,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'markdownx',
+    'social_django',
+
     'blog',
     'core',
 ]
@@ -51,6 +52,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
 ROOT_URLCONF = 'ezo2.urls'
@@ -68,6 +71,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -80,8 +86,12 @@ WSGI_APPLICATION = 'ezo2.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',   # Backends disponibles : 'postgresql', 'mysql', 'sqlite3' et 'oracle'.
+        'NAME': 'ezo2',             # Nom de la base de données
+        'USER': 'ezo-chan',
+        'PASSWORD': 'C9@Q5<sh',
+        'HOST': '',                    # Utile si votre base de données est sur une autre machine
+        'PORT': '',                         # ... et si elle utilise un autre port que celui par défaut
     }
 }
 
@@ -123,11 +133,38 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
-
 )
 
-STATIC_ROOT = os.path.join(BASE_DIR, "static_root")
+MEDIA_ROOT = BASE_DIR + '/static/'
+MEDIA_URL = '/media/'
+
+STATIC_ROOT = os.path.join("/var/www/ezo2", "static_root")
 
 #django-markdownx config :
 
 MARKDOWNX_UPLOAD_MAX_SIZE = 1 * 1024 * 1024
+
+
+# configuration social_django
+
+# ajout des backend en fonction des besoins.
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.github.GithubOAuth2',
+    'social_core.backends.twitter.TwitterOAuth',
+    'social_core.backends.facebook.FacebookOAuth2',
+
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+LOGIN_URL = 'coreHome'
+LOGOUT_URL = 'coreHome'
+LOGIN_REDIRECT_URL = 'coreHome'
+
+SOCIAL_AUTH_GITHUB_KEY = '2a5ed468faf362815e6d'
+SOCIAL_AUTH_GITHUB_SECRET = 'd8f773bed201ae7f3966e007550007cd307b7642'
+
+SOCIAL_AUTH_TWITTER_KEY = 'L9dpUBUfLNOPhElARrmB9wRYj'
+SOCIAL_AUTH_TWITTER_SECRET = 'rEBYpsvtX9z9Sl2bNGFL9YOV4ajb8oDhBIHpr5wv9ZCHbZtVqf'
+
+# SOCIAL_AUTH_FACEBOOK_KEY = '335261616996541'
+# SOCIAL_AUTH_FACEBOOK_SECRET = '4a8b49b20d1e8969b047cad17a54a23f'
