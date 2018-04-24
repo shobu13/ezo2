@@ -86,12 +86,8 @@ WSGI_APPLICATION = 'ezo2.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',   # Backends disponibles : 'postgresql', 'mysql', 'sqlite3' et 'oracle'.
-        'NAME': 'ezo2',             # Nom de la base de données
-        'USER': 'ezo-chan',
-        'PASSWORD': 'C9@Q5<sh',
-        'HOST': '',                    # Utile si votre base de données est sur une autre machine
-        'PORT': '',                         # ... et si elle utilise un autre port que celui par défaut
+        'ENGINE': 'django.db.backends.sqlite3',   # Backends disponibles : 'postgresql', 'mysql', 'sqlite3' et 'oracle'.
+        'NAME': 'db.sqlite3',             # Nom de la base de données
     }
 }
 
