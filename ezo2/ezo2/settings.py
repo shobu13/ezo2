@@ -26,7 +26,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -86,8 +85,11 @@ WSGI_APPLICATION = 'ezo2.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',   # Backends disponibles : 'postgresql', 'mysql', 'sqlite3' et 'oracle'.
-        'NAME': 'db.sqlite3',             # Nom de la base de données
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'ezo2',
+        'USER': 'ezo-chan',
+        'PASSWORD': 'C9@Q5<sh',
+        'HOST': 'localhost',
     }
 }
 
@@ -138,10 +140,9 @@ MEDIA_URL = '/media/'
 
 STATIC_ROOT = os.path.join("/var/www/ezo2", "static_root")
 
-#django-markdownx config :
+# django-markdownx config :
 
 MARKDOWNX_UPLOAD_MAX_SIZE = 1 * 1024 * 1024
-
 
 # configuration social_django
 
