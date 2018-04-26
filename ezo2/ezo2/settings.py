@@ -135,10 +135,10 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
 
-MEDIA_ROOT = BASE_DIR + '/static/'
+MEDIA_ROOT = os.path.join("/var/www/ezo2", "media")
 MEDIA_URL = '/media/'
 
-STATIC_ROOT = os.path.join("/var/www/ezo2", "static_root")
+STATIC_ROOT = os.path.join("/var/www/ezo2", "static")
 
 # django-markdownx config :
 
