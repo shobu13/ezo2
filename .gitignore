@@ -7,3 +7,5 @@ ezo2/core/templatetags/__pycache__/
 ezo2/core/migrations/__pycache__/
 ezo2/blog/migrations/__pycache__/
 
+
+ezo2/db\.sqlite3
