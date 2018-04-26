@@ -1,5 +1,6 @@
 {% extends "blog/baseBlog.html" %} <!--Permet d'importer les blocs de base.html-->
 {% load static %}
+{% load markdown_filter %}
 
 {% block titre %}{{ global.WEBSITE_NOM }}{% endblock %}
 
@@ -37,7 +38,7 @@
                                  alt="Card image cap">
                             <div class="card-body">
                                 <h2 class="card-title">{{ article.titre }}</h2>
-                                <p class="card-text">{{ article.contenu|truncatewords_html:40|linebreaks }}</p>
+                                <p class="card-text">{{ article.contenu|truncatewords_html:40|markdownify|safe }}</p>
                                 <a href="{% url 'lire' id_article=article.id slug=article.slug %}"
                                    class="btn btn-primary">Lire Plus &rarr;</a>
                             </div>

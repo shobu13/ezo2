@@ -1,10 +1,12 @@
+# coding: utf8
 """Module servant à afficher les pages composant l'application Core."""
+from django.core.exceptions import ValidationError
 from django.shortcuts import render, redirect, reverse
 import global_var
 from django.contrib.auth.models import User, Group
 from django.contrib.auth import login, logout, authenticate
 from django.core.files.images import get_image_dimensions
-from django.core.files import File
+from django.contrib.auth.password_validation import validate_password
 
 from core.forms import CreateUserForm, ConnexionForm
 from core.models import Profil
@@ -103,24 +105,32 @@ def deconnexion(request):
 def inscription(request):
     """vue affichant la page d'inscription et traitant les données de cette dernière."""
     msg = ''
+    error = []
     if request.method == "POST":
         form = CreateUserForm(request.POST)
         if form.is_valid():
             username = form.cleaned_data["username"]
             password = form.cleaned_data["password"]
             confirm_password = request.POST["confirm-password"]
-            if password == confirm_password:
-                form.save()
-                user = User.objects.get(username=username)
-                user.set_password(password)
-                user.save()
-                msg = 'utilisateur créer'
-            else:
-                msg = 'les deux mot de passe ne correspondent pas.'
+            try:
+                validate_password(password)
+                if password == confirm_password:
+                    form.save()
+                    user = User.objects.get(username=username)
+                    user.set_password(password)
+                    user.save()
+                else:
+                    error.append('les deux mot de passe ne correspondent pas.\r')
+            except ValidationError as error_list:
+                print("error = ", error_list)
+                for i in error_list:
+                    error.append(i)
         else:
-            msg = 'le formulaire est invalide.'
+            error.append('le formulaire est invalide.')
+            for i in form.errors:
+                error.append(i)
     else:
         form = CreateUserForm()
     return render(request, "core/inscription.html", {'global': global_var, 'form': form,
-                                                     'msg': msg})
+                                                     'msg': msg, 'error':error})
 

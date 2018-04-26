@@ -24,10 +24,8 @@ SECRET_KEY = 'bsmb%s5y(w=e1ffcs1x%2asg2-u_u$)h4+dgqu-@=5r(v1%q!e'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
-MEDIA_ROOT = BASE_DIR + '/static/'
-MEDIA_URL = '/media/'
 
 # Application definition
 
@@ -88,8 +86,8 @@ WSGI_APPLICATION = 'ezo2.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.sqlite3',   # Backends disponibles : 'postgresql', 'mysql', 'sqlite3' et 'oracle'.
+        'NAME': 'db.sqlite3',             # Nom de la base de données
     }
 }
 
@@ -124,6 +122,8 @@ USE_L10N = True
 
 USE_TZ = True
 
+# SECURE_SSL_REDIRECT = True
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
@@ -131,10 +131,12 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
-
 )
 
-STATIC_ROOT = os.path.join(BASE_DIR, "static_root")
+MEDIA_ROOT = BASE_DIR + '/static/'
+MEDIA_URL = '/media/'
+
+STATIC_ROOT = os.path.join("/var/www/ezo2", "static_root")
 
 #django-markdownx config :
 
