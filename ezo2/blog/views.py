@@ -9,6 +9,7 @@ from blog.models import Article, Categorie
 
 def home(request):
     """Vue permettant l'affichage de la page d'acceuil, renvoie les 4 articles les plus récents."""
+    global_var.refresh()
     article_list = Article.objects.order_by('date').reverse()[:4]
     return render(request, 'blog/index.html',
                   {'articleList': article_list, 'global': global_var})
@@ -16,6 +17,7 @@ def home(request):
 
 def lire(request, id_article, slug):
     """vue permettant l'affichage d'un article en particulier."""
+    global_var.refresh()
     article = get_object_or_404(Article, id=id_article, slug=slug)
     print(article)
     return render(request, 'blog/post.html', {'article': article, 'global': global_var})
@@ -24,6 +26,7 @@ def lire(request, id_article, slug):
 def article_liste(request, page=0, keywords="null", selected_cat="null"):
     """vue affichant la liste des articles, 4 article par page, par ordre chronologique et avec
     possibilité de filtrer par mot clé ou par catégorie."""
+    global_var.refresh()
     categorie_liste = []
     baked_article_liste = []
 
