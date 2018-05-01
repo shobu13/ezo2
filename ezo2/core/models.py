@@ -16,14 +16,10 @@ class Profil(models.Model):
         return "Profil de {0}".format(self.user.username)
 
 
-class Parametres(models.Model):
+class Parametre(models.Model):
     """modèle contenant divers paramètres du site"""
     nom = models.CharField(null=False, blank=False, max_length=50)
     valeur = MarkdownxField(null=True, blank=True)
-
-    class Meta:
-        verbose_name = "Parametres"
-        verbose_name_plural = "Parametres"
 
     def __str__(self):
         return self.nom
