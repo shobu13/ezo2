@@ -1,5 +1,5 @@
 from django.contrib import admin
-from core.models import Profil, Parametres
+from core.models import Profil, Parametre
 
 
 class ParametreAdmin(admin.ModelAdmin):
@@ -16,4 +16,4 @@ class ParametreAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Profil)
-admin.site.register(Parametres, ParametreAdmin)
+admin.site.register(Parametre, ParametreAdmin)
