@@ -1,17 +1,15 @@
 """Django views module, used to display HTMl template and process data"""
 from django.db.models import Q
-# from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
 from django.shortcuts import render
 
 import global_var
-# from ezo2.shobu import slug_generator
-# from ezo2.blog.forms import ContactForm, ArticleForm
 from blog.models import Article, Categorie
 
 
 def home(request):
     """Vue permettant l'affichage de la page d'acceuil, renvoie les 4 articles les plus récents."""
+    global_var.refresh()
     article_list = Article.objects.order_by('date').reverse()[:4]
     return render(request, 'blog/index.html',
                   {'articleList': article_list, 'global': global_var})
@@ -19,6 +17,7 @@ def home(request):
 
 def lire(request, id_article, slug):
     """vue permettant l'affichage d'un article en particulier."""
+    global_var.refresh()
     article = get_object_or_404(Article, id=id_article, slug=slug)
     print(article)
     return render(request, 'blog/post.html', {'article': article, 'global': global_var})
@@ -27,6 +26,7 @@ def lire(request, id_article, slug):
 def article_liste(request, page=0, keywords="null", selected_cat="null"):
     """vue affichant la liste des articles, 4 article par page, par ordre chronologique et avec
     possibilité de filtrer par mot clé ou par catégorie."""
+    global_var.refresh()
     categorie_liste = []
     baked_article_liste = []
 
@@ -89,46 +89,3 @@ def article_liste(request, page=0, keywords="null", selected_cat="null"):
                        'article_liste': '', 'page': -1,
                        'oldDisable': 'disabled', 'newDisable': 'disabled', 'keywords': keywords,
                        'selected_cat': selected_cat, })
-
-
-# TODO ---------------------------------------------------------------
-
-
-# def contact(request):
-#     # on construit le formulaire, soit avec les données postée
-#     # sois vide si l'utilisateur y accède pour la première fois
-#     form = ContactForm(request.POST or None)
-#     # On vérifie que les données du formulaire sont bien valide
-#     if form.is_valid():
-#         # on lit la valeur des différent champs
-#         sujet = form.cleaned_data['sujet']
-#         message = form.cleaned_data['message']
-#         envoyeur = form.cleaned_data['envoyeur']
-#         renvoi = form.cleaned_data['renvoi']
-#
-#         # on valide l'envoie de l'e-mail
-#         envoi = True
-#
-#     # quoi qu'il arrive, on retourne la page du formulaire
-#     return render(request, 'blog/contact.html', locals())
-#
-#
-# def article(request):
-#     form = ArticleForm(request.POST or None)
-#
-#     if form.is_valid():
-#         titre = form.cleaned_data['titre']
-#         auteur = form.cleaned_data['auteur']
-#         contenu = form.cleaned_data['contenu']
-#         categorie = form.cleaned_data['categorie']
-#         # le commit=False permet d'enregister les donnée du formulaire dans un objet
-#         # avec lequel on peut travailer avant de l'envoyer.
-#         article = form.save(commit=False)
-#         article.slug = slug_generator(form.cleaned_data['titre'])
-#         article.save()
-#         return HttpResponse('envoyer')
-#     return render(request, 'blog/articleForm.html', locals())
-#
-#
-# def e404(request):
-#     return render(request, '404.html')

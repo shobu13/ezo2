@@ -1,8 +1,7 @@
 # coding: utf8
 """Module servant à afficher les pages composant l'application Core."""
 from django.core.exceptions import ValidationError
-from django.shortcuts import render, redirect, reverse
-import global_var
+from django.shortcuts import render
 from django.contrib.auth.models import User, Group
 from django.contrib.auth import login, logout, authenticate
 from django.core.files.images import get_image_dimensions
@@ -11,33 +10,28 @@ from django.contrib.auth.password_validation import validate_password
 from core.forms import CreateUserForm, ConnexionForm
 from core.models import Profil
 
+import global_var
+
+
 def home(request):
     """affiche la page d'acceuil du core"""
+    global_var.refresh()
     return render(request, 'core/home.html', {'global': global_var})
 
 
 def a_propos(request):
     """vue affichant diverse informations sur la communauté et ses membres."""
+    global_var.refresh()
     staff_group = Group.objects.get(name='staff')
     artistes_group = Group.objects.get(name='artistes')
     staff_liste = User.objects.filter(groups=staff_group, profil__isnull=False).exclude(username='admin').exclude(groups=artistes_group)
     artistes_liste = User.objects.filter(groups=artistes_group, profil__isnull=False).exclude(username='admin')
-    # for i in artistes_liste:
-    #     try:
-    #         i.profil
-    #     except:
-    #         artistes_liste.get(username=i.username).delete()
-    #
-    # for i in staff_liste:
-    #     try:
-    #         i.profil
-    #     except:
-    #         staff_liste.get(username=i.username).delete()
     return render(request, 'core/aPropos.html', {'global': global_var, 'staff_liste': staff_liste, 'artistes_liste':artistes_liste, })
 
 
 def connexion(request):
     """vue affichant la page de connexion et traitant les données de cette dernière."""
+    global_var.refresh()
     msg = ''
     if request.method == "POST":
         form = ConnexionForm(request.POST)
@@ -60,6 +54,7 @@ def connexion(request):
 def afficher_profil(request):
     """affiche le profil de l'utilisateur connecté et permet la modification de la description ainsi que de l'image de
     l'utilisateur connecté"""
+    global_var.refresh()
     error = []
     if request.method == "POST":
         description = request.POST['description']
@@ -98,12 +93,14 @@ def afficher_profil(request):
 def deconnexion(request):
     """vue permetant à l'utilisateur de se déconnecter, renvoie vers la page d'acceuil avec la
     variable déconexion à True pour afficher une popup"""
+    global_var.refresh()
     logout(request)
     return render(request, 'core/home.html', {'global': global_var, 'deconnexion': True})
 
 
 def inscription(request):
     """vue affichant la page d'inscription et traitant les données de cette dernière."""
+    global_var.refresh()
     msg = ''
     error = []
     if request.method == "POST":
