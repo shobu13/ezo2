@@ -108,11 +108,18 @@
                         <a class="nav-link" href="#">{{ user.username }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">|</a>
+                        <a class="nav-link" href="#">&emsp;&emsp;</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'blogHome' %}">Accueil</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Gallerie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Écriture&emsp;&emsp;</a>
+                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'article_liste' %}">Articles</a>
                     </li>
@@ -143,9 +150,6 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'connexion' %}">Se connecter</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'inscription' %}">Nous rejoindre</a>
                     </li>
                 </ul>
             </div>
